@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SelectionCommittee.Views.InfoPage"  BackgroundColor="White">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Margin="10">
+                <Label Text="ОСНОВНЫЕ СВЕДЕНИЯ" HorizontalTextAlignment="Center" FontAttributes="Bold" TextColor="Black" FontSize="22"/>
+                <Label  Text="Автономная некоммерческая организация дополнительного профессионального образования «Оренбургская бизнес-школа»" FontAttributes="Bold" TextColor="Black" FontSize="16"/>
+                <Label  LineBreakMode="WordWrap">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Дата создания: " TextColor="Black" FontAttributes="Bold" FontSize="16" />
+                            <Span Text="19 апреля 2010 года." FontSize="16" TextColor="Black"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Label  LineBreakMode="CharacterWrap">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Учредитель: " TextColor="Black" FontAttributes="Bold" FontSize="16" />
+                            <Span Text="Белов Игорь Петрович "  TextColor="Black" FontAttributes="Italic" FontSize="16"/>
+                            <Span Text="- гражданин РФ: "  TextColor="Black" FontSize="16"/>
+                            <Span Text="" TextColor="Black"  FontSize="16" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Label Text="Ректор АНО ДПО «Оренбургская бизнес-школа»;" TextColor="Black"/>
+                <Label Text="Почетный работник ВПО РФ;" TextColor="Black"/>
+                <Label Text="Член Правления ТПП Оренбургской области;" TextColor="Black"/>
+                <Label Text="Член Cовета по развитию малого и среднего предпринимательства при Губернаторе Оренбургской области." TextColor="Black"/>
+
+                <Image Source="licenz.jpg" Margin="10"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+            android:TabbedPage.ToolbarPlacement="Bottom"
+            android:TabbedPage.BarItemColor="White"
+            BackgroundColor="{StaticResource MainColor }"
+            android:TabbedPage.BarSelectedItemColor="Black"
+            NavigationPage.HasNavigationBar="false"  
+            
+            xmlns:views="clr-namespace:SelectionCommittee.Views"
+            
+            
+            x:Class="SelectionCommittee.Views.MainPage">
+
+    <TabbedPage.Children>
+
+        <NavigationPage Title="Программы" IconImageSource="Programs" BackgroundColor="White" BarTextColor="White">
+            <x:Arguments >
+              
+                <views:SPrograms
+                    Title="Программы обучения" />
+                    
+            </x:Arguments>
+        </NavigationPage>
+
+        <NavigationPage Title="Связь" IconImageSource="chat_icon">
+            <x:Arguments>
+
+                <views:ChatPage
+                    Title="Связаться с нами"/>
+
+            </x:Arguments>
+        </NavigationPage>
+
+        <NavigationPage Title="О нас" IconImageSource="Programs" BackgroundColor="White">
+            <x:Arguments>
+
+                <views:InfoPage
+                    Title="Информация об организации"/>
+
+            </x:Arguments>
+        </NavigationPage>
+
+
+    </TabbedPage.Children>
+  
+</TabbedPage>

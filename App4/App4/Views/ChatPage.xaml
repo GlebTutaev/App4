@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SelectionCommittee.Views.ChatPage" BackgroundColor="White">
+    <ContentPage.Content>
+        <StackLayout  Padding="40" VerticalOptions="Center" HorizontalOptions="FillAndExpand" >
+
+
+            <Image Source="logo.png"/>
+
+            <Entry x:Name="PhoneE" TextColor="Black" Placeholder="Ваше имя*" PlaceholderColor="Black"  BackgroundColor="Transparent"/>
+            <Entry x:Name="NameE" TextColor="Black" Placeholder="Ваш номер телефон*" PlaceholderColor="Black"  BackgroundColor="Transparent"/>
+            <Entry x:Name="MeesageE" TextColor="Black" Placeholder="Введите ваше сообщение*" PlaceholderColor="Black" BackgroundColor="Transparent" />
+            <Button Text="Отправить"
+                    TextColor="White"
+                    VerticalOptions="Center"
+                    BorderWidth="1.5"
+                    BorderColor="#3a5c4f"
+                    BackgroundColor="{StaticResource ButtonColor}"
+                    CornerRadius="50">
+                
+            </Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
