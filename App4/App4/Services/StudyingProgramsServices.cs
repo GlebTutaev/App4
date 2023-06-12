@@ -1,5 +1,5 @@
-﻿using Newtonsoft.Json;
-using SelectionCommittee.Models;
+﻿using App4.Models;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -14,6 +14,7 @@ namespace SelectionCommittee.Services
 
         string Base_url = "https://mosap-orenburg.ru/output.json";
 
+
         public async Task<ObservableCollection<StudyingPrograms>> getProgram()
         {
             string url = Base_url;
@@ -25,7 +26,6 @@ namespace SelectionCommittee.Services
             {
                 var result =  await message.Content.ReadAsStringAsync();
                 var json = JsonConvert.DeserializeObject<ObservableCollection<StudyingPrograms>>(result);
-
                 return json;
             }
 

@@ -1,5 +1,5 @@
-﻿using Newtonsoft.Json.Linq;
-using SelectionCommittee.Models;
+﻿using App4.Models;
+using Newtonsoft.Json.Linq;
 using SelectionCommittee.Services;
 using System;
 using System.Collections.Generic;
@@ -24,15 +24,11 @@ namespace SelectionCommittee.ViewModels
 
         public async void GetProgram()
         {
-           var result = await _rest.getProgram();
-
-            
+           var result = await _rest.getProgram();        
             if (result !=  null)
-            {
-                
+            {               
                 StudyingPrograms = result;
-            }
-            
+            }            
         }
 
         private ObservableCollection<StudyingPrograms> studyingPrograms;

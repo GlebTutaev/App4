@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Text;
 
 
-namespace SelectionCommittee.Models
+namespace App4.Models
 {
     public class SCModel
     {

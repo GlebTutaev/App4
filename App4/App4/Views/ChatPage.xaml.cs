@@ -16,5 +16,16 @@ namespace SelectionCommittee.Views
         {
             InitializeComponent();
         }
+
+        private void Button_Message(object sender, EventArgs e)
+        {
+            if (PhoneE.Text != null && NameE.Text != null && MeesageE.Text != null)
+            {
+                DisplayAlert("Уведомление", "Сообщение успешно отправлено!", "Ok");
+            }
+            else { DisplayAlert("Уведомление", "Поле не заполнено или заполнено неверно!", "Ok"); }
+
+
+        }
     }
 }

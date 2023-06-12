@@ -17,7 +17,7 @@
                     BorderWidth="1.5"
                     BorderColor="#3a5c4f"
                     BackgroundColor="{StaticResource ButtonColor}"
-                    CornerRadius="50">
+                    CornerRadius="50" Clicked="Button_Message">
                 
             </Button>
         </StackLayout>

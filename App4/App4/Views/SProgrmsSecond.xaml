@@ -1,28 +1,28 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="SelectionCommittee.Views.SPrograms" BackgroundColor="White">
+             x:Class="App4.Views.SProgrmsSecond">
     <AbsoluteLayout>
-      
-            <CollectionView x:Name="MainCv" ItemsSource="{Binding StudyingPrograms}"
+
+        <CollectionView x:Name="MainCvSecond" 
                             SelectionMode="Single" SelectionChanged="CollectionView_SelectionChanged">
-                <CollectionView.ItemsLayout>
-                    <GridItemsLayout 
+            <CollectionView.ItemsLayout>
+                <GridItemsLayout 
                         Orientation="Vertical"
                         Span="1"
                         VerticalItemSpacing="3"
                         HorizontalItemSpacing="1"/>
-                </CollectionView.ItemsLayout>
-                <CollectionView.ItemTemplate>
-                    <DataTemplate>
-                        <Grid RowSpacing="0" Background="White" >
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition Height="Auto"/>
-                                        <RowDefinition Height="Auto"/>
-                                    </Grid.RowDefinitions>
+            </CollectionView.ItemsLayout>
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Grid RowSpacing="0" Background="White" >
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
 
                         <StackLayout >
-                            
+
                             <Frame Grid.Row="0" Grid.Column="0" Background="White"                     
                            HorizontalOptions="Center"
                            VerticalOptions="Center">
@@ -40,10 +40,10 @@
                         </StackLayout>
                     </Grid>
 
-                        
-                    </DataTemplate>
-                </CollectionView.ItemTemplate>
-            </CollectionView>
+
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
 
         <ImageButton  
                 Source="filter.png"
@@ -54,7 +54,7 @@
                     BackgroundColor="{StaticResource ButtonColor}"
                     CornerRadius="50" Clicked="Button_Clicked"            
                     Margin="5">
-            
+
         </ImageButton>
     </AbsoluteLayout>
 </ContentPage>

@@ -1,4 +1,4 @@
-﻿using SelectionCommittee.Models;
+﻿using App4.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -69,6 +69,18 @@ namespace App4.Views
            
 
             
+        }
+
+        private void Button_Clicked(object sender, EventArgs e)
+        {
+            if (NameField.Text == null && PhoneField.Text == null && MailField.Text == null)
+            {
+                DisplayAlert("Уведомление!", "Поля заполнены не корректно или не заполнены", "Ок");
+            }
+            else
+            {
+                DisplayAlert("Уведомление!", "Заявка успешно отправлена", "Ок");
+            } 
         }
     }
 }

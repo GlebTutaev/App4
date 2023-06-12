@@ -1,6 +1,8 @@
-﻿using Newtonsoft.Json;
-using SelectionCommittee.Models;
+﻿using App4.Models;
+using App4.Views;
+using Newtonsoft.Json;
 using SelectionCommittee.Services;
+using SelectionCommittee.ViewModels;
 using SelectionCommittee.Views;
 using System;
 using System.Collections.Generic;
@@ -18,45 +20,47 @@ namespace App4
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class FilterPage : ContentPage
     {
-        public FilterPage()
+
+       
+        public List<StudyingPrograms> Items { get; set; }
+
+        public FilterPage(List<StudyingPrograms> newItems)
         {
             InitializeComponent();
+            Items = newItems;
+            BindingContext = new StudyingProgramsViewModel();
         }
 
-        public string Base_url = "https://mosap-orenburg.ru/output.json";
-
-        public async Task<ObservableCollection<StudyingPrograms>> getProgram()
-        {
-            string url = Base_url;
-
-            HttpClient client = new HttpClient();
-            HttpResponseMessage message = await client.GetAsync(url);
-
-            if (message.StatusCode == System.Net.HttpStatusCode.OK)
-            {
-                var result = await message.Content.ReadAsStringAsync();
-                var json = JsonConvert.DeserializeObject<ObservableCollection<StudyingPrograms>>(result);
-
-                return json;
-            }
-
-            return null;
-        }
+        
 
         private async void Button_Clicked(object sender, EventArgs e)
         {
+
          var FT = Fulltime.IsEnabled;
+         var PE = ParttimeEvening.IsEnabled;
+         var D = Distance.IsEnabled;
+         var newItems = Items; 
 
-        var items = getProgram();
-        
-            
-            if (FT)
+
+           if (FT)
             {
-                
+                newItems = newItems.Where(x => x.tvochno == "1").ToList();              
             }
+            if (PE)
+            {
+                newItems = newItems.Where(x => x.tvzaochno == "1").ToList();                
+            }
+            if (D)
+            {
+                newItems = newItems.Where(x => x.tvdistant == "1").ToList();
+               
+            }
+            await Navigation.PushAsync(new SProgrmsSecond(newItems));
+        }
 
-
-
+        private async void Button_Clicked_1(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new SPrograms());
         }
     }
 }
