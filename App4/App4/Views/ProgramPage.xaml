@@ -79,6 +79,7 @@
                                Margin="5">
                                 <Entry x:Name="MailField" Placeholder="E-mail" PlaceholderColor="Black" Keyboard="Email"/>
                             </Frame>
+                            <Label x:Name="ErrorLabel" TextColor="Red"/>
                             <Button Text="Оставить заявку" BackgroundColor="#f2d361" CornerRadius="10"  VerticalOptions="Center" Margin="10" Clicked="Button_Clicked"/>
                             
                             <Label Text="Нажимая на кнопку, вы соглашаетесь с Политикой конфиденциальности и на получение рассылок"

@@ -1,8 +1,10 @@
 ﻿using App4.Models;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 using Xamarin.Forms;
@@ -11,12 +13,17 @@ using static Xamarin.Essentials.AppleSignInAuthenticator;
 
 namespace App4.Views
 {
+
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ProgramPage : ContentPage
     {
+        public StudyingPrograms selItem;
+
         public ProgramPage(StudyingPrograms item)
         {
             InitializeComponent();
+
+            selItem = item;
 
             if (item.tvimg != "")
             {
@@ -73,14 +80,30 @@ namespace App4.Views
 
         private void Button_Clicked(object sender, EventArgs e)
         {
+            var email = MailField.Text;
+            var phone = PhoneField.Text;
+            var phonePattern = "^\\+?[1-9][0-9]{7,14}$";
+            var emailPattern = "^(?(\")(\".+?(?<!\\\\)\"@)|(([0-9a-z]((\\.(?!\\.))|[-!#\\$%&'\\*\\+/=\\?\\^`\\{\\}\\|~\\w])*)(?<=[0-9a-z])@))(?(\\[)(\\[(\\d{1,3}\\.){3}\\d{1,3}\\])|(([0-9a-z][-\\w]*[0-9a-z]*\\.)+[a-z0-9][\\-a-z0-9]{0,22}[a-z0-9]))$";
+
             if (NameField.Text == null && PhoneField.Text == null && MailField.Text == null)
             {
                 DisplayAlert("Уведомление!", "Поля заполнены не корректно или не заполнены", "Ок");
             }
             else
-            {
-                DisplayAlert("Уведомление!", "Заявка успешно отправлена", "Ок");
-            } 
+            {               
+                if (Regex.IsMatch(email, emailPattern))
+                {                    
+                   DisplayAlert("Уведомление!", "Заявка успешно отправлена", "Ок");
+
+                    var obj = new { email = email, phone = phone, id = selItem.id  };
+                    var json = JsonConvert.SerializeObject(obj);
+                   // DisplayAlert("Уведомление!", json.ToString(), "Ок"); 
+                }
+                else
+                {               
+                    ErrorLabel.Text = "Почта введена неверно!";
+                }               
+            }                 
         }
     }
 }

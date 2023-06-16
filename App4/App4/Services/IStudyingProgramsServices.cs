@@ -6,9 +6,9 @@ using System.Collections.ObjectModel;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SelectionCommittee.Services
+namespace App4.Services
 {
-    public interface IStudyingProgramsServices
+    public interface IStudyingProgramsServices 
     {
         Task<ObservableCollection<StudyingPrograms>> getProgram();
     }

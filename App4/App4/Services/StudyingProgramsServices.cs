@@ -7,7 +7,7 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SelectionCommittee.Services
+namespace App4.Services
 {
     public class StudyingProgramsServices : IStudyingProgramsServices
     {

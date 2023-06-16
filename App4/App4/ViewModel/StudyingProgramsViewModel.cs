@@ -1,6 +1,6 @@
 ﻿using App4.Models;
+using App4.Services;
 using Newtonsoft.Json.Linq;
-using SelectionCommittee.Services;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -9,7 +9,7 @@ using System.Linq;
 using System.Text;
 using Xamarin.Forms;
 
-namespace SelectionCommittee.ViewModels
+namespace App4.ViewModels
 {
     public class StudyingProgramsViewModel : INotifyPropertyChanged
     {
@@ -36,8 +36,7 @@ namespace SelectionCommittee.ViewModels
         public ObservableCollection<StudyingPrograms> StudyingPrograms
         {
             get 
-            {
-                //JToken token = studyingPrograms SelectToken("$.1[?(@.tv.img != null)]");
+            {              
                 return studyingPrograms;
             }
             set 

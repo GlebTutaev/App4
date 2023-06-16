@@ -4,10 +4,7 @@
              x:Class="App4.FilterPage">
     <ContentPage.Content>
         <StackLayout BackgroundColor="White" >
-            <Frame HeightRequest="800" WidthRequest="200" BackgroundColor="White"
-               HasShadow="True" 
-               VerticalOptions="CenterAndExpand"
-               CornerRadius="5" Margin="4">
+            <Frame HeightRequest="800" WidthRequest="200" BackgroundColor="White" HasShadow="True" VerticalOptions="CenterAndExpand" CornerRadius="5" Margin="4">
                 <ScrollView  HeightRequest="10" >
                     <StackLayout >
                         <StackLayout x:Name="EducationForms">
@@ -62,25 +59,12 @@
                         <ColumnDefinition Width="*"/>
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
-                    <Button  Clicked="Button_Clicked" 
-                    Text="Применить"
-                    TextColor="White"
-                    VerticalOptions="Center"
-                    BorderWidth="1.5"
-                    BorderColor="#3a5c4f"
-                    BackgroundColor="#1e9c6b"
+                    <Button  Clicked="Filter_Applications_Btn" Text="Применить" VerticalOptions="Center" BorderColor="#3a5c4f" BackgroundColor="#1e9c6b"
                     CornerRadius="50" Margin="5"/>
-
-                    <Button Grid.Column="1" Text="Сбросить" TextColor="White"
-                    VerticalOptions="Center"
-                    BorderWidth="1.5"
-                    BorderColor="#3a5c4f"
-                    BackgroundColor="#1e9c6b"
-                    CornerRadius="50" Margin="5" Clicked="Button_Clicked_1"/>
+                    <Button Grid.Column="1" Text="Сбросить" TextColor="White" VerticalOptions="Center" BorderColor="#3a5c4f" BackgroundColor="#1e9c6b"
+                    CornerRadius="50" Margin="5" Clicked="Filter_Removes_Btn"/>
                 </Grid>
-               
             </StackLayout>
-            
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

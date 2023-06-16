@@ -8,9 +8,10 @@
 
             <Image Source="logo.png"/>
 
-            <Entry x:Name="PhoneE" TextColor="Black" Placeholder="Ваше имя*" PlaceholderColor="Black"  BackgroundColor="Transparent"/>
-            <Entry x:Name="NameE" TextColor="Black" Placeholder="Ваш номер телефон*" PlaceholderColor="Black"  BackgroundColor="Transparent"/>
+            <Entry x:Name="NameE" TextColor="Black" Placeholder="Ваше имя*" PlaceholderColor="Black"  BackgroundColor="Transparent" />
+            <Entry x:Name="PhoneE" TextColor="Black" Placeholder="Ваш номер телефон*" PlaceholderColor="Black"  BackgroundColor="Transparent" Keyboard="Telephone"/>
             <Entry x:Name="MeesageE" TextColor="Black" Placeholder="Введите ваше сообщение*" PlaceholderColor="Black" BackgroundColor="Transparent" />
+            <Label x:Name="ErrorLabel" TextColor="Red"/>
             <Button Text="Отправить"
                     TextColor="White"
                     VerticalOptions="Center"
@@ -18,7 +19,6 @@
                     BorderColor="#3a5c4f"
                     BackgroundColor="{StaticResource ButtonColor}"
                     CornerRadius="50" Clicked="Button_Message">
-                
             </Button>
         </StackLayout>
     </ContentPage.Content>

@@ -1,7 +1,5 @@
-﻿using App4.Pages;
+﻿
 using App4.Services;
-using App4.ViewModel;
-using SelectionCommittee.Services;
 using SelectionCommittee.Views;
 using System;
 using Xamarin.Forms;

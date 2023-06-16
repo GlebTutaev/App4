@@ -11,14 +11,12 @@ namespace App4.Models
     {
     }
 
-    public class StudyingPrograms
+    public class StudyingPrograms  
     {
         public string id { get; set; }
         public string pagetitle { get; set; }
         public string introtext { get; set; }
         public string parent { get; set; }
-
-
         
         [JsonProperty("tv.img")]
         public string tvimg 
@@ -42,7 +40,6 @@ namespace App4.Models
         [JsonProperty("tv.distant")]
         public string tvdistant { get; set; }
     }
-
     public class tvoptionItem {
 
         public string MIGX_id { get; set; }
