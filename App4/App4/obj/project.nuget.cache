@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "aV0SeYpxAPqEZOgD983WMpj9yI6jvMjjV3NXsrgq6UR4hD0TRg45u8xe6XNkuvgkrJzKn4sI6y3tyOBbckb22w==",
+  "success": true,
+  "projectFilePath": "Z:\\Projects\\VS\\App4\\App4\\App4\\App4.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\aka-l\\.nuget\\packages\\microsoft.aspnet.signalr.client\\2.4.3\\microsoft.aspnet.signalr.client.2.4.3.nupkg.sha512",
+    "C:\\Users\\aka-l\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\aka-l\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\aka-l\\.nuget\\packages\\newtonsoft.json\\11.0.2\\newtonsoft.json.11.0.2.nupkg.sha512",
+    "C:\\Users\\aka-l\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\aka-l\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512",
+    "C:\\Users\\aka-l\\.nuget\\packages\\xamarin.forms\\5.0.0.2196\\xamarin.forms.5.0.0.2196.nupkg.sha512"
+  ],
+  "logs": []
+}
