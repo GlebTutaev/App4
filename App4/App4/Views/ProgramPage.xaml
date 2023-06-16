@@ -3,38 +3,39 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="App4.Views.ProgramPage"  Background="White">
     <ContentPage.Content>
-        <Frame HeightRequest="700"
+        <StackLayout>
+            <Frame HeightRequest="800"
                WidthRequest="200" BackgroundColor="White"
-               HasShadow="True" 
+               HasShadow="False" 
                VerticalOptions="CenterAndExpand"
                CornerRadius="5" Margin="4">
-            <ScrollView HeightRequest="1">
-                <StackLayout >
-                    <StackLayout Orientation="Vertical">
-                        <Label x:Name="Pagetitle" Text="{Binding pagetitle}" FontSize="20" FontAttributes="Bold" TextColor="Black" HorizontalTextAlignment="Center" VerticalOptions="Center"/>
-                        <Image x:Name="ImageField" HorizontalOptions="Center" VerticalOptions="Center" />
-                        <StackLayout x:Name="Options" Orientation="Vertical">
-                            <Label x:Name="Options_1" Text="{Binding tvoptions}" FontSize="16" TextColor="Black" FontAttributes="Italic" HeightRequest="25"/>
-                            <Label x:Name="Options_2" Text="{Binding tvoptions}" FontSize="16" TextColor="Black" FontAttributes="Italic" HeightRequest="25"/>
-                            <Label x:Name="Options_3" Text="{Binding tvoptions}" FontSize="16" TextColor="Black" FontAttributes="Italic" HeightRequest="30"/>
+                <ScrollView HeightRequest="10">
+                    <StackLayout >
+                        <StackLayout Orientation="Vertical">
+                            <Label x:Name="Pagetitle" Text="{Binding pagetitle}" FontSize="20" FontAttributes="Bold" TextColor="Black" HorizontalTextAlignment="Center" VerticalOptions="Center"/>
+                            <Image x:Name="ImageField" HorizontalOptions="Center" VerticalOptions="Center" />
+                            <StackLayout x:Name="Options" Orientation="Vertical">
+                                <Label x:Name="Options_1" Text="{Binding tvoptions}" FontSize="16" TextColor="Black" FontAttributes="Italic" HeightRequest="25"/>
+                                <Label x:Name="Options_2" Text="{Binding tvoptions}" FontSize="16" TextColor="Black" FontAttributes="Italic" HeightRequest="25"/>
+                                <Label x:Name="Options_3" Text="{Binding tvoptions}" FontSize="16" TextColor="Black" FontAttributes="Italic" HeightRequest="30"/>
+                            </StackLayout>
+
                         </StackLayout>
-                        
-                    </StackLayout>
 
-                    <StackLayout x:Name="EducationForm" Orientation="Vertical" >
-                        <Label x:Name="EF" Text="Форма обучения" FontSize="20" FontAttributes="Bold" TextColor="Black"/>
-                        <StackLayout Orientation="Horizontal" >
-                            <Label x:Name="Ochno" Text="{Binding tvochno }" FontSize="16" TextColor="Black" FontAttributes="Italic" TextDecorations="Underline"/>
-                            <Label x:Name="Zaochno" Text="{Binding tvzaochno}" TextColor="Black" FontSize="16" FontAttributes="Italic" TextDecorations="Underline"/>
-                            <Label x:Name="Distant" Text="{Binding tvdistant}" TextColor="Black" FontSize="16" FontAttributes="Italic" TextDecorations="Underline"/>
-                            <Label x:Name="NotFounFormE" TextColor="Black" FontSize="16" FontAttributes="Italic" TextDecorations="Underline"/>
+                        <StackLayout x:Name="EducationForm" Orientation="Vertical" >
+                            <Label x:Name="EF" Text="Форма обучения" FontSize="20" FontAttributes="Bold" TextColor="Black"/>
+                            <StackLayout Orientation="Horizontal" >
+                                <Label x:Name="Ochno" Text="{Binding tvochno }" FontSize="16" TextColor="Black" FontAttributes="Italic" TextDecorations="Underline"/>
+                                <Label x:Name="Zaochno" Text="{Binding tvzaochno}" TextColor="Black" FontSize="16" FontAttributes="Italic" TextDecorations="Underline"/>
+                                <Label x:Name="Distant" Text="{Binding tvdistant}" TextColor="Black" FontSize="16" FontAttributes="Italic" TextDecorations="Underline"/>
+                                <Label x:Name="NotFounFormE" TextColor="Black" FontSize="16" FontAttributes="Italic" TextDecorations="Underline"/>
+                            </StackLayout>
                         </StackLayout>
-                    </StackLayout>
 
 
-                    <StackLayout x:Name="IntrotextFrame">
-                        <Frame  BackgroundColor="{StaticResource BGColor}" BorderColor="Black" CornerRadius="10">
-                            <Label  x:Name="Introtext" Text="{Binding introtext}"
+                        <StackLayout x:Name="IntrotextFrame">
+                            <Frame  BackgroundColor="White" BorderColor="Black" CornerRadius="3">
+                                <Label  x:Name="Introtext" Text="{Binding introtext}"
                                     TextColor="Black" FontSize="16"
                                     TextDecorations="None"
                                     HorizontalOptions="Center"
@@ -42,47 +43,44 @@
                                     VerticalTextAlignment="Center"
                                     HorizontalTextAlignment="Center"/>
 
-                        </Frame>
-                    </StackLayout>
+                            </Frame>
+                        </StackLayout>
 
-                    <StackLayout Orientation="Horizontal">
-                        <Label x:Name="PriceEducation" Text="Цена обучения " FontAttributes="Bold" FontSize="16" TextColor="Black"/>
-                        <Label x:Name="Price" Text="{Binding tvprice}" FontSize="16" TextColor="Black"/>
-                        <Label x:Name="PriceEducationUom" Text=" рублей" FontAttributes="Bold" FontSize="16" TextColor="Black"/>
-                        
-
-                    </StackLayout>
-
-                    <Frame HeightRequest="460" BackgroundColor="{StaticResource MainColor}" CornerRadius="10">
-                        <StackLayout Margin="25" Orientation="Vertical">
-                            <Label Text="Получи консультацию приемной комиссии, оставив заявку"
+                        <StackLayout Orientation="Horizontal">
+                            <Label x:Name="PriceEducation" Text="Цена обучения " FontAttributes="Bold" FontSize="16" TextColor="Black"/>
+                            <Label x:Name="Price" Text="{Binding tvprice}" FontSize="16" TextColor="Black"/>
+                            <Label x:Name="PriceEducationUom" Text=" рублей" FontAttributes="Bold" FontSize="16" TextColor="Black"/>
+                        </StackLayout>
+                        <Frame HeightRequest="460" BackgroundColor="{StaticResource MainColor}" CornerRadius="10">
+                            <StackLayout Margin="25" Orientation="Vertical">
+                                <Label Text="Получи консультацию приемной комиссии, оставив заявку"
                                TextColor="Black"
                                FontSize="15" FontAttributes="Bold"/>
-                            <Frame BackgroundColor="{StaticResource BGColor}"
+                                <Frame BackgroundColor="{StaticResource BGColor}"
                                BorderColor="Black"
                                CornerRadius="6"
                                HeightRequest="40"
                                Margin="5">
-                                <Entry x:Name="NameField" Placeholder="Имя" PlaceholderColor="Black" />
-                            </Frame>
-                            <Frame BackgroundColor="{StaticResource BGColor}"
+                                    <Entry x:Name="NameField" Placeholder="Имя" PlaceholderColor="Black" />
+                                </Frame>
+                                <Frame BackgroundColor="{StaticResource BGColor}"
                                BorderColor="Black"
                                CornerRadius="6"
                                HeightRequest="40"
                                Margin="5">
-                                <Entry x:Name="PhoneField" Placeholder="Телефон" PlaceholderColor="Black" Keyboard="Telephone"/>
-                            </Frame>
-                            <Frame BackgroundColor="{StaticResource BGColor}"
+                                    <Entry x:Name="PhoneField" Placeholder="Телефон" PlaceholderColor="Black" Keyboard="Telephone"/>
+                                </Frame>
+                                <Frame BackgroundColor="{StaticResource BGColor}"
                                BorderColor="Black"
                                CornerRadius="6"
                                HeightRequest="40"
                                Margin="5">
-                                <Entry x:Name="MailField" Placeholder="E-mail" PlaceholderColor="Black" Keyboard="Email"/>
-                            </Frame>
-                            <Label x:Name="ErrorLabel" TextColor="Red"/>
-                            <Button Text="Оставить заявку" BackgroundColor="#f2d361" CornerRadius="10"  VerticalOptions="Center" Margin="10" Clicked="Button_Clicked"/>
-                            
-                            <Label Text="Нажимая на кнопку, вы соглашаетесь с Политикой конфиденциальности и на получение рассылок"
+                                    <Entry x:Name="MailField" Placeholder="E-mail" PlaceholderColor="Black" Keyboard="Email"/>
+                                </Frame>
+                                <Label x:Name="ErrorLabel" TextColor="Red"/>
+                                <Button Text="Оставить заявку" BackgroundColor="#f2d361" CornerRadius="10"  VerticalOptions="Center" Margin="10" Clicked="Button_Clicked"/>
+
+                                <Label Text="Нажимая на кнопку, вы соглашаетесь с Политикой конфиденциальности и на получение рассылок"
                                    FontSize="10"
                                    TextColor="Black"
                                    HorizontalTextAlignment="Center"
@@ -90,23 +88,22 @@
                                    HorizontalOptions="Center"
                                    VerticalOptions="Center"
                                    FontAttributes="Italic" />
-                        </StackLayout>
-                    </Frame>
-                    
-
-                        <Label Text="Вступительные экзамены:" TextColor="Black"
+                            </StackLayout>
+                        </Frame>
+                        <Label x:Name="LExams" Text="Вступительные экзамены:" TextColor="Black"
                                FontSize="20"
-                               FontAttributes="Bold"/>
-                    <Frame BackgroundColor="{StaticResource BGColor}" CornerRadius="5" BorderColor="Black">
-                        <StackLayout Orientation="Vertical">
-                            <Label x:Name="Exam_1" Text="{Binding tvexamen}" FontSize="16" TextColor="Black" FontAttributes="Italic" HeightRequest="25" />
-                            <Label x:Name="Exam_2" Text="{Binding tvexamen}" FontSize="16" TextColor="Black" FontAttributes="Italic" HeightRequest="25"/>
-                            <Label x:Name="Exam_3" Text="{Binding tvexamen}" FontSize="16" TextColor="Black" FontAttributes="Italic" HeightRequest="25"/>
-                        </StackLayout>
-                    </Frame>
-                </StackLayout>
-            </ScrollView>
-        </Frame>
-                 
+                               FontAttributes="Bold" Margin="0,10,0,0" IsVisible="True"/>
+                        <Frame x:Name="FExams" BackgroundColor="White" CornerRadius="3" BorderColor="Black" IsVisible="True">
+                            <StackLayout Orientation="Vertical">
+                                <Label x:Name="Exam_1" Text="{Binding tvexamen}" FontSize="16" TextColor="Black" FontAttributes="Italic" HeightRequest="25" />
+                                <Label x:Name="Exam_2" Text="{Binding tvexamen}" FontSize="16" TextColor="Black" FontAttributes="Italic" HeightRequest="25"/>
+                                <Label x:Name="Exam_3" Text="{Binding tvexamen}" FontSize="16" TextColor="Black" FontAttributes="Italic" HeightRequest="25"/>
+                            </StackLayout>
+                        </Frame>
+                    </StackLayout>
+                </ScrollView>
+            </Frame>
+        </StackLayout>
+        
     </ContentPage.Content>
 </ContentPage>

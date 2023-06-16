@@ -53,6 +53,12 @@ namespace App4.Views
             Zaochno.Text = item.tvzaochno == "" ? null : "Заочная";
             Distant.Text = item.tvdistant == "" ? null : "Дистанционная";
 
+            if (item.tvexamen is null)
+            {
+                LExams.IsVisible = false;
+                FExams.IsVisible = false;
+            }
+
             if (Ochno.Text is null && Zaochno.Text is null && Distant.Text is null)
             {
                 EducationForm.IsVisible = false;
@@ -73,7 +79,7 @@ namespace App4.Views
             Options_2.Text = item.tvoptions[1].option1 == "" ? item.tvoptions[1].option2 : item.tvoptions[1].option1;
             Options_3.Text = item.tvoptions[2].option1 == "" ? item.tvoptions[2].option2 : item.tvoptions[2].option1;
 
-           
+            
 
             
         }
@@ -82,7 +88,7 @@ namespace App4.Views
         {
             var email = MailField.Text;
             var phone = PhoneField.Text;
-            var phonePattern = "^\\+?[1-9][0-9]{7,14}$";
+            var phonePattern = @"^((\+7|7|8)+([0-9]){10})$";
             var emailPattern = "^(?(\")(\".+?(?<!\\\\)\"@)|(([0-9a-z]((\\.(?!\\.))|[-!#\\$%&'\\*\\+/=\\?\\^`\\{\\}\\|~\\w])*)(?<=[0-9a-z])@))(?(\\[)(\\[(\\d{1,3}\\.){3}\\d{1,3}\\])|(([0-9a-z][-\\w]*[0-9a-z]*\\.)+[a-z0-9][\\-a-z0-9]{0,22}[a-z0-9]))$";
 
             if (NameField.Text == null && PhoneField.Text == null && MailField.Text == null)
@@ -92,11 +98,19 @@ namespace App4.Views
             else
             {               
                 if (Regex.IsMatch(email, emailPattern))
-                {                    
-                   DisplayAlert("Уведомление!", "Заявка успешно отправлена", "Ок");
-
-                    var obj = new { email = email, phone = phone, id = selItem.id  };
-                    var json = JsonConvert.SerializeObject(obj);
+                {
+                    if (Regex.IsMatch(phone, phonePattern))
+                    {
+                        DisplayAlert("Уведомление!", "Заявка успешно отправлена", "Ок");
+                        ErrorLabel.Text = "";
+                        var obj = new { email = email, phone = phone, id = selItem.id };
+                        var json = JsonConvert.SerializeObject(obj);
+                    }
+                    else
+                    {
+                        ErrorLabel.Text = "Номер телефона введен неверно!";
+                    }
+                                     
                    // DisplayAlert("Уведомление!", json.ToString(), "Ок"); 
                 }
                 else
