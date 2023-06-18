@@ -1,22 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="SelectionCommittee.Views.ChatPage" BackgroundColor="White">
+             x:Class="SelectionCommittee.Views.ChatPage" BackgroundColor="{StaticResource FonColor}">
     <ContentPage.Content>
-        <StackLayout  Padding="40" VerticalOptions="Center" HorizontalOptions="FillAndExpand" >
+        <StackLayout  Padding="40" VerticalOptions="Center" HorizontalOptions="FillAndExpand" BackgroundColor="{StaticResource FonColor}" >
 
 
             <Image Source="logo.png"/>
 
-            <Entry x:Name="NameE" TextColor="Black" Placeholder="Ваше имя*" PlaceholderColor="Black"  BackgroundColor="Transparent" />
-            <Entry x:Name="PhoneE" TextColor="Black" Placeholder="Ваш номер телефон*" PlaceholderColor="Black"  BackgroundColor="Transparent" Keyboard="Telephone"/>
-            <Entry x:Name="MeesageE" TextColor="Black" Placeholder="Введите ваше сообщение*" PlaceholderColor="Black" BackgroundColor="Transparent" />
+            <Entry x:Name="NameE" TextColor="{StaticResource ButtonColor}" Placeholder="Ваше имя*" PlaceholderColor="Wheat"  BackgroundColor="Transparent" />
+            <Entry x:Name="PhoneE" TextColor="{StaticResource ButtonColor}" Placeholder="Ваш номер телефон*" PlaceholderColor="Wheat"  BackgroundColor="Transparent" Keyboard="Telephone"/>
+            <Entry x:Name="MeesageE" TextColor="{StaticResource ButtonColor}" Placeholder="Введите ваше сообщение*" PlaceholderColor="Wheat" BackgroundColor="Transparent" />
             <Label x:Name="ErrorLabel" TextColor="Red"/>
             <Button Text="Отправить"
                     TextColor="White"
                     VerticalOptions="Center"
                     BorderWidth="1.5"
-                    BorderColor="#3a5c4f"
+                    BorderColor="{StaticResource FonMenuColor}"
                     BackgroundColor="{StaticResource ButtonColor}"
                     CornerRadius="50" Clicked="Button_Message">
             </Button>

@@ -7,7 +7,9 @@
         <ResourceDictionary>
             <Color x:Key="ButtonColor">#fdce4c</Color>
             <Color x:Key="MainColor">#32A05D</Color>
-            <Color x:Key="BGColor">#30BA8F</Color>
+            <Color x:Key="BGColor">#17301c</Color>
+            <Color x:Key="FonColor">#121212</Color>
+            <Color x:Key="FonMenuColor">#000000</Color>
 
         </ResourceDictionary>
     </Application.Resources>

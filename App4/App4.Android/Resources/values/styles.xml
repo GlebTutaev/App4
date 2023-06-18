@@ -9,7 +9,7 @@
     <item name="android:windowFullscreen">true</item>
     <item name="windowNoTitle">true</item>
     <item name="windowActionBar">false</item>
-    <item name="colorPrimary">#32A05D</item>
+    <item name="colorPrimary">#000000</item>
     <item name="colorPrimaryDark">#1976D2</item>
     <item name="colorAccent">#FF4081</item>
     <item name="windowActionModeOverlay">true</item>

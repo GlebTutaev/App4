@@ -457,3 +457,6 @@ Z:\Projects\VS\App4\App4\App4.Android\obj\Release\130\stamp\_CopyConfigFiles.sta
 Z:\Projects\VS\App4\App4\App4.Android\obj\Release\130\stamp\_GenerateJavaStubs.stamp
 Z:\Projects\VS\App4\App4\App4.Android\obj\Release\130\stamp\_GeneratePackageManagerJava.stamp
 Z:\Projects\VS\App4\App4\App4.Android\obj\Release\130\stamp\_ResolveLibraryProjectImports.stamp
+Z:\Projects\VS\App4\App4\App4.Android\obj\Release\130\res\drawable\filter.png
+Z:\Projects\VS\App4\App4\App4.Android\obj\Release\130\res\drawable\logo.png
+Z:\Projects\VS\App4\App4\App4.Android\obj\Release\130\res\drawable\licenz.jpg

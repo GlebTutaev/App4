@@ -1,70 +1,69 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="App4.FilterPage">
-    <ContentPage.Content>
-        <StackLayout BackgroundColor="White" >
-            <Frame HeightRequest="800" WidthRequest="200" BackgroundColor="White" HasShadow="True" VerticalOptions="CenterAndExpand" CornerRadius="5" Margin="4">
-                <ScrollView  HeightRequest="10" >
-                    <StackLayout >
-                        <StackLayout x:Name="EducationForms">
-                            <StackLayout x:Name="EducationForm" Margin="0,0,0,20">
-                                <Label Text="Форма обучения" TextColor="Black" FontAttributes="Bold" FontSize="40"/>
+             x:Class="App4.FilterPage" BackgroundColor="Black">
+    <StackLayout BackgroundColor="{StaticResource FonColor}" >
+        <Frame HeightRequest="800" WidthRequest="200"  BackgroundColor="{StaticResource FonColor}"
+                   HasShadow="True" VerticalOptions="CenterAndExpand" CornerRadius="5" Margin="4">
+            <ScrollView  BackgroundColor="{StaticResource FonColor}" HeightRequest="10" >
+                <StackLayout >
+                    <StackLayout x:Name="EducationForms">
+                        <StackLayout x:Name="EducationForm" Margin="0,0,0,20">
+                            <Label Text="Форма обучения" TextColor="White" FontAttributes="Bold" FontSize="40"/>
 
-                                <StackLayout Orientation="Horizontal">
-                                    <CheckBox x:Name="Fulltime" Color="Black"/>
-                                    <Label Text="Очная" FontSize="25" TextColor="Black" />
-                                </StackLayout>
-
-                                <StackLayout Orientation="Horizontal">
-                                    <CheckBox  x:Name="ParttimeEvening" Color="Black"/>
-                                    <Label Text="Заочная" FontSize="25" TextColor="Black" />
-                                </StackLayout>
-
-                                <StackLayout Orientation="Horizontal">
-                                    <CheckBox  x:Name="Distance" Color="Black"/>
-                                    <Label Text="Дистанционная" FontSize="25" TextColor="Black" />
-                                </StackLayout>
+                            <StackLayout Orientation="Horizontal">
+                                <CheckBox x:Name="Fulltime" Color="White"/>
+                                <Label Text="Очная" FontSize="25" TextColor="{StaticResource MainColor}" />
                             </StackLayout>
 
-                            <StackLayout x:Name="EducationKinds" Margin="0,0,0,20" >
-
-                                <Label Text="Виды образования" TextColor="Black" FontAttributes="Bold" FontSize="40" Margin="0,0,0,2"/>
-
-                                <StackLayout Orientation="Horizontal">
-                                    <CheckBox x:Name="HigherEducation" Color="Black"/>
-                                    <Label Text="Высшее образовние" FontSize="25" TextColor="Black" />
-                                </StackLayout>
-
-                                <StackLayout Orientation="Horizontal">
-
-                                    <CheckBox  x:Name="College" Color="Black"/>
-                                    <Label Text="Колледж" FontSize="25" TextColor="Black" />
-                                </StackLayout>
-
-                                <StackLayout Orientation="Horizontal">
-                                    <CheckBox  x:Name="Magistracy" Color="Black"/>
-                                    <Label Text="Магистратура" FontSize="25" TextColor="Black" />
-                                </StackLayout>
+                            <StackLayout Orientation="Horizontal">
+                                <CheckBox  x:Name="ParttimeEvening" Color="White"/>
+                                <Label Text="Заочная" FontSize="25" TextColor="{StaticResource MainColor}" />
                             </StackLayout>
-                      
+
+                            <StackLayout Orientation="Horizontal">
+                                <CheckBox  x:Name="Distance" Color="White"/>
+                                <Label Text="Дистанционная" FontSize="25" TextColor="{StaticResource MainColor}" />
+                            </StackLayout>
                         </StackLayout>
-                    </StackLayout>
-                </ScrollView>
-            </Frame>
 
-            <StackLayout Orientation="Horizontal" HorizontalOptions="End">
-                <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
-                    </Grid.ColumnDefinitions>
-                    <Button  Clicked="Filter_Applications_Btn" Text="Применить" VerticalOptions="Center" BorderColor="#3a5c4f" BackgroundColor="#1e9c6b"
-                    CornerRadius="50" Margin="5"/>
-                    <Button Grid.Column="1" Text="Сбросить" TextColor="White" VerticalOptions="Center" BorderColor="#3a5c4f" BackgroundColor="#1e9c6b"
+                        <StackLayout x:Name="EducationKinds" Margin="0,0,0,20" >
+
+                            <Label Text="Виды образования" TextColor="White" FontAttributes="Bold" FontSize="40" Margin="0,0,0,2"/>
+
+                            <StackLayout Orientation="Horizontal">
+                                <CheckBox x:Name="HigherEducation" Color="White"/>
+                                <Label Text="Высшее образовние" FontSize="25" TextColor="{StaticResource MainColor}" />
+                            </StackLayout>
+
+                            <StackLayout Orientation="Horizontal">
+
+                                <CheckBox  x:Name="College" Color="White"/>
+                                <Label Text="Колледж" FontSize="25" TextColor="{StaticResource MainColor}" />
+                            </StackLayout>
+
+                            <StackLayout Orientation="Horizontal">
+                                <CheckBox  x:Name="Magistracy" Color="White"/>
+                                <Label Text="Магистратура" FontSize="25" TextColor="{StaticResource MainColor}" />
+                            </StackLayout>
+                        </StackLayout>
+
+                    </StackLayout>
+                </StackLayout>
+            </ScrollView>
+        </Frame>
+
+        <StackLayout Orientation="Horizontal" HorizontalOptions="End">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Button  Clicked="Filter_Applications_Btn" Text="Применить" VerticalOptions="Center" BorderColor="#3a5c4f" BackgroundColor="#1e9c6b"
+                    CornerRadius="50" Margin="5" TextColor="White"/>
+                <Button Grid.Column="1" Text="Сбросить" TextColor="White" VerticalOptions="Center" BorderColor="#3a5c4f" BackgroundColor="#1e9c6b"
                     CornerRadius="50" Margin="5" Clicked="Filter_Removes_Btn"/>
-                </Grid>
-            </StackLayout>
+            </Grid>
         </StackLayout>
-    </ContentPage.Content>
+    </StackLayout>
 </ContentPage>
