@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
@@ -21,7 +22,7 @@ namespace SelectionCommittee.Views
             InitializeComponent();
         }
 
-        private void Button_Message(object sender, EventArgs e)
+        private async void Button_Message(object sender, EventArgs e)
         {
             string phone = PhoneE.Text;
             string message = MeesageE.Text;
@@ -39,10 +40,16 @@ namespace SelectionCommittee.Views
             {
                 if (Regex.IsMatch(phone, phonePattern))
                 {
+                    var client = new HttpClient();
+
                     DisplayAlert("Уведомление!", "Сообщеие успешно отправлено!", "Ок");
                     ErrorLabel.Text = "";
                     var obj = new { message = message, phone = phone, name = name };
                     var json = JsonConvert.SerializeObject(obj);
+                    HttpContent content = new StringContent(json);
+                    content.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
+
+                    var response =  client.PostAsync("", content);
                 }
                 else
                 {

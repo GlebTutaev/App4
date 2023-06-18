@@ -460,3 +460,14 @@ Z:\Projects\VS\App4\App4\App4.Android\obj\Release\130\stamp\_ResolveLibraryProje
 Z:\Projects\VS\App4\App4\App4.Android\obj\Release\130\res\drawable\filter.png
 Z:\Projects\VS\App4\App4\App4.Android\obj\Release\130\res\drawable\logo.png
 Z:\Projects\VS\App4\App4\App4.Android\obj\Release\130\res\drawable\licenz.jpg
+Z:\Projects\VS\App4\App4\App4.Android\obj\Release\130\App4.Android.GeneratedMSBuildEditorConfig.editorconfig
+Z:\Projects\VS\App4\App4\App4.Android\obj\Release\130\android\assets\Microsoft.Bcl.AsyncInterfaces.dll
+Z:\Projects\VS\App4\App4\App4.Android\obj\Release\130\android\assets\Refit.dll
+Z:\Projects\VS\App4\App4\App4.Android\obj\Release\130\android\assets\System.Buffers.dll
+Z:\Projects\VS\App4\App4\App4.Android\obj\Release\130\android\assets\System.Net.Http.Json.dll
+Z:\Projects\VS\App4\App4\App4.Android\obj\Release\130\android\assets\System.Runtime.CompilerServices.Unsafe.dll
+Z:\Projects\VS\App4\App4\App4.Android\obj\Release\130\android\assets\System.Text.Encodings.Web.dll
+Z:\Projects\VS\App4\App4\App4.Android\obj\Release\130\android\assets\System.Text.Json.dll
+Z:\Projects\VS\App4\App4\App4.Android\obj\Release\130\android\assets\System.Threading.Tasks.Extensions.dll
+Z:\Projects\VS\App4\App4\App4.Android\obj\Release\130\android\assets\System.Web.Services.dll
+Z:\Projects\VS\App4\App4\App4.Android\obj\Release\130\android\assets\System.Web.Services.pdb

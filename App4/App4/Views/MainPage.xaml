@@ -4,7 +4,7 @@
             xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
             android:TabbedPage.ToolbarPlacement="Bottom"
             android:TabbedPage.BarItemColor="{StaticResource MainColor}"
-            BackgroundColor="{StaticResource FonMenuColor}"
+            BackgroundColor="{StaticResource FonColor}"
             android:TabbedPage.BarSelectedItemColor="White"
             NavigationPage.HasNavigationBar="false"  
             xmlns:views="clr-namespace:SelectionCommittee.Views"

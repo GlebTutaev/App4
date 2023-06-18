@@ -4,7 +4,7 @@
              x:Class="App4.Views.ProgramPage"  BackgroundColor="{StaticResource FonColor}">
     <ContentPage.Content>
         <StackLayout>
-            <Frame HeightRequest="800"
+            <Frame HeightRequest="900"
                WidthRequest="200" BackgroundColor="{StaticResource FonColor}"
                HasShadow="False" 
                VerticalOptions="CenterAndExpand"
@@ -55,7 +55,7 @@
 
                             </StackLayout>
                         </Frame>
-                        <Frame HeightRequest="460" BackgroundColor="{StaticResource MainColor}" CornerRadius="10">
+                        <Frame HeightRequest="470" BackgroundColor="{StaticResource MainColor}" CornerRadius="10">
                             <StackLayout Margin="25" Orientation="Vertical">
                                 <Label Text="Получи консультацию приемной комиссии, оставив заявку" HorizontalTextAlignment="Center"
                                TextColor="Black"
@@ -84,7 +84,7 @@
                                 <Label x:Name="ErrorLabel" TextColor="Red"/>
                                 <Button Text="Оставить заявку" BackgroundColor="#f2d361" CornerRadius="10"  VerticalOptions="Center" Margin="10" Clicked="Button_Clicked"/>
 
-                                <Label Text="Нажимая на кнопку, вы соглашаетесь с Политикой конфиденциальности и на получение рассылок"
+                                <Label Text="Нажимая на кнопку, вы соглашаетесь с Политикой конфиденциальности" Margin="0,0,0,0"
                                    FontSize="10"
                                    TextColor="Black"
                                    HorizontalTextAlignment="Center"

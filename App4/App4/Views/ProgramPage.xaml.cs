@@ -3,6 +3,7 @@ using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
@@ -101,10 +102,19 @@ namespace App4.Views
                 {
                     if (Regex.IsMatch(phone, phonePattern))
                     {
+                        var client = new HttpClient();
                         DisplayAlert("Уведомление!", "Заявка успешно отправлена", "Ок");
                         ErrorLabel.Text = "";
-                        var obj = new { email = email, phone = phone, id = selItem.id };
+                        var obj = new { title = email, phone = phone, id = selItem.id };
                         var json = JsonConvert.SerializeObject(obj);
+
+                        HttpContent content = new StringContent(json);
+                        content.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
+
+                        var response = client.PostAsync("https://jsonplaceholder.typicode.com/posts", content);
+
+
+                        DisplayAlert(response.Result.ToString(), "", "Ok");
                     }
                     else
                     {
